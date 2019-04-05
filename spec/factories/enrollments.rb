@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :enrollment do
-    putter { nil }
-    contest { "" }
-    active { false }
+    putter
+    contest
+    active { true }
   end
 end

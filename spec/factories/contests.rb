@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :contest do
-    name { "MyString" }
+    sequence(:name) { |n| "Contest #{n}" }
   end
 end
