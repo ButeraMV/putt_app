@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_05_193600) do
+ActiveRecord::Schema.define(version: 2019_04_05_193805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,22 @@ ActiveRecord::Schema.define(version: 2019_04_05_193600) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "enrollments", force: :cascade do |t|
+    t.bigint "putter_id"
+    t.bigint "contest_id"
+    t.boolean "active", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contest_id"], name: "index_enrollments_on_contest_id"
+    t.index ["putter_id"], name: "index_enrollments_on_putter_id"
+  end
+
   create_table "putters", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "enrollments", "contests"
+  add_foreign_key "enrollments", "putters"
 end
