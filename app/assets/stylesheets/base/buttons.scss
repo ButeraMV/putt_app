@@ -1,0 +1,31 @@
+.btn-primary {
+  @include button-variant($btnPrimaryColor, darken($btnPrimaryColor, 7.5%), darken($btnPrimaryColor, 10%), lighten($btnPrimaryColor,5%), lighten($btnPrimaryColor, 10%), darken($btnPrimaryColor,30%));
+}
+
+.btn-outline-primary {
+  @include button-outline-variant($btnPrimaryColor, #222222, lighten($btnPrimaryColor,5%), $btnPrimaryColor);
+}
+
+.btn-success {
+  @include button-variant($btnSuccessColor, darken($btnSuccessColor, 7.5%), darken($btnSuccessColor, 10%), lighten($btnSuccessColor,5%), lighten($btnSuccessColor, 10%), darken($btnSuccessColor,30%));
+}
+
+.btn-outline-success {
+  @include button-outline-variant($btnSuccessColor, #222222, lighten($btnSuccessColor,5%), $btnSuccessColor);
+}
+
+.btn-warning {
+  @include button-variant($btnWarningColor, darken($btnWarningColor, 7.5%), darken($btnWarningColor, 10%), lighten($btnWarningColor,5%), lighten($btnWarningColor, 10%), darken($btnWarningColor,30%));
+}
+
+.btn-outline-warning {
+  @include button-outline-variant($btnWarningColor, #222222, lighten($btnWarningColor,5%), $btnWarningColor);
+}
+
+.btn-danger {
+  @include button-variant($btnDangerColor, darken($btnDangerColor, 7.5%), darken($btnDangerColor, 10%), lighten($btnDangerColor,5%), lighten($btnDangerColor, 10%), darken($btnDangerColor,30%));
+}
+
+.btn-outline-danger {
+  @include button-outline-variant($btnDangerColor, #222222, lighten($btnDangerColor,5%), $btnDangerColor);
+}

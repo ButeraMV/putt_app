@@ -1,0 +1,8 @@
+<div class="container text-center">
+  <h3>New Contest:</h3>
+
+  <%= bootstrap_form_for(@contest) do |f| %>
+    <%= f.text_field :name, hide_label: true, placeholder: "Contest and date" %>
+    <%= f.primary "Create" %>
+  <% end %>
+</div>

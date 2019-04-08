@@ -11,5 +11,12 @@ RSpec.describe Contest, type: :model do
       second_contest = create(:contest)
       expect(Contest.all).to eq([second_contest, first_contest])
     end
+
+    it 'default_scope limits to 10' do
+      15.times do
+        create(:contest)
+      end
+      expect(Contest.all.length).to eq(10)
+    end
   end
 end

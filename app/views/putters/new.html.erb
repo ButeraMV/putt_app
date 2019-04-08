@@ -1,0 +1,7 @@
+<div class="container text-center">
+  <%= simple_form_for @putter do |f| %>
+    <%= f.input :name %>
+    <%= f.association :contests, as: :check_boxes %>
+    <%= f.button :submit, class: 'btn-primary' %>
+  <% end %>
+</div>

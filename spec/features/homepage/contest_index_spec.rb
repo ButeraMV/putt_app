@@ -17,4 +17,11 @@ RSpec.feature 'Contest Index', :type => :feature do
     visit '/'
     expect(page).to have_content(contest.name)
   end
+
+  scenario 'clicking on a contest' do
+    contest = create(:contest)
+    visit '/'
+    click_link "#{contest.name}"
+    expect(current_path).to eq(contest_path(contest))
+  end
 end

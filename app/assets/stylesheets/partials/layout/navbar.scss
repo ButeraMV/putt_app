@@ -1,0 +1,7 @@
+nav {
+  background-color: $navbarColor;
+  .navbar-brand, .nav-item {
+    color: $backgroundColor !important;
+  }
+  margin-bottom: 20px;
+}
