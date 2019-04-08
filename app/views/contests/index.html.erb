@@ -1,3 +1,15 @@
-<h2>Putting Contest</h2>
+<div class="container text-center">
+  <%= link_to 'New Contest', new_contest_path, class: 'btn btn-primary new-contest-button' %>
+  <table class="table table-striped contest-table">
+    <% @contests.each do |contest| %>
+      <tr>
+        <td>
+          <%= contest.name %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
 
-<%= link_to 'New Contest', new_contest_path %>
+
+

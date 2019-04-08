@@ -1,1 +1,12 @@
+// Bootstrap
 @import "bootstrap";
+
+// Variables
+@import "base/variables";
+
+// Default Styles
+@import "base/default";
+
+// Partials
+@import "partials/*";
+@import "partials/layout/*";
