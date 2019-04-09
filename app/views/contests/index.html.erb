@@ -5,7 +5,7 @@
     <% @contests.each do |contest| %>
       <tr>
         <td>
-          <%= link_to contest.name, edit_contest_path(contest), class: 'contest-link' %>
+          <%= link_to contest.name, contest_path(contest), class: 'contest-link' %>
         </td>
       </tr>
     <% end %>

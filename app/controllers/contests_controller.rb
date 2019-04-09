@@ -5,6 +5,10 @@ class ContestsController < ApplicationController
     @contests = Contest.all
   end
 
+  def show
+    @contest = Contest.find(params[:id])
+    @participants = @contest.enrollments.where(active: true)
+  end
 
   def new
     @contest = Contest.new
@@ -19,9 +23,10 @@ class ContestsController < ApplicationController
     end
   end
 
-  def edit
-    @enrollments = @contest.enrollments.where(active: true)
-    @putters = @contest.putters
+  def remove_enrollment
+    contest = Contest.find(params[:contest_id])
+    enrollment = contest.enrollments.where(putter_id: params[:putter_id])
+    enrollment.update_all(:active => false)
   end
 
   private
