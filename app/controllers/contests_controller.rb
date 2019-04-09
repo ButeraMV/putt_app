@@ -1,12 +1,10 @@
 class ContestsController < ApplicationController
-  before_action :set_contest, only: [:show]
+  before_action :set_contest, only: [:edit]
 
   def index
     @contests = Contest.all
   end
 
-  def show
-  end
 
   def new
     @contest = Contest.new
@@ -19,6 +17,11 @@ class ContestsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @enrollments = @contest.enrollments.where(active: true)
+    @putters = @contest.putters
   end
 
   private

@@ -1,10 +1,11 @@
 <div class="container text-center">
-  <%= link_to 'New Contest', new_contest_path, class: 'btn btn-primary new-contest-button' %>
+  <%= link_to 'New Contest', new_contest_path, class: 'btn btn-primary' %>
+  <%= link_to 'Add Putter', new_putter_path, class: 'btn btn-primary' %>
   <table class="table contest-table">
     <% @contests.each do |contest| %>
       <tr>
         <td>
-          <%= link_to contest.name, contest_path(contest), class: 'contest-link' %>
+          <%= link_to contest.name, edit_contest_path(contest), class: 'contest-link' %>
         </td>
       </tr>
     <% end %>
