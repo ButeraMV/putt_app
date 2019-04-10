@@ -30,7 +30,6 @@ class ContestsController < ApplicationController
   end
 
   private
-  
   def contest_params
     params.require(:contest).permit(:name)
   end
