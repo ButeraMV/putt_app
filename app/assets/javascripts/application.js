@@ -27,6 +27,10 @@ function toggleOut(element) {
   row.classList.add("hidden");
 }
 
+function toggleOpacity(element) {
+  element.classList.add("last-round-marker")
+}
+
 function refreshPage() {
   var goodToGo = confirm("Move to next round?")
   if(goodToGo) {
