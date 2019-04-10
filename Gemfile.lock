@@ -47,8 +47,8 @@ GEM
     arel (9.0.0)
     autoprefixer-rails (9.5.1)
       execjs
-    bindex (0.6.0)
-    bootsnap (1.4.2)
+    bindex (0.7.0)
+    bootsnap (1.4.3)
       msgpack (~> 1.0)
     bootstrap (4.3.1)
       autoprefixer-rails (>= 9.1.0)
@@ -265,4 +265,4 @@ RUBY VERSION
    ruby 2.6.1p33
 
 BUNDLED WITH
-   2.0.1
+   1.17.3
